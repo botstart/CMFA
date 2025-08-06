@@ -1,0 +1,90 @@
+default:
+- &Expi1 vM Jagoan 10 08 ✓ ✓
+- &uuid1 d2a52d00-f749-4089-a869-6454fb0a0a78
+- &host1 id2-ray.ipservers.xyz
+- &path1 /JAGOANSSH/
+
+- &Expi2 vL Jagoan 28 juli ✓
+- &uuid2 7c8c2e61-ba3d-450b-b985-3c4bcc29f51e
+- &host2 id2vless.ipservers.xyz
+- &path2 /jagoanssh
+
+- &Expi3 vM Server 10 08 ✓
+- &uuid3 cf65d5b4-a665-4b2b-b64d-37578e5751ad
+- &host3 idray.serverssh.web.id
+- &path3 /serverssh.net
+
+- &Expi4 vL Server 10 08 ✓
+- &uuid4 c3d92bf3-5457-45c0-9010-fc5bf4f5ba41
+- &host4 idray.serverssh.web.id
+- &path4 /serverssh
+
+- &bopok 162.159.138.78
+
+#  udp: true
+#  interface-name: eth1
+
+proxies:
+#====== Byu OPOK
+- name: *Expi1
+  server: 162.159.138.78
+  port: 443
+  type: vmess
+  uuid: *uuid1
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+- name: *Expi2
+  server: 162.159.138.78
+  port: 443
+  type: vless
+  uuid: *uuid2
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: /jagoanssh
+    headers:
+      Host: *host2
+  udp: true
+- name: *Expi3
+  server: 162.159.138.78
+  port: 443
+  type: vmess
+  uuid: *uuid3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: /serverssh.net
+    headers:
+      Host: *host3
+  udp: true
+- name: *Expi4
+  server: 162.159.138.78
+  port: 443
+  type: vless
+  uuid: *uuid4
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /serverssh
+    headers:
+      Host: *host4
+  udp: true
