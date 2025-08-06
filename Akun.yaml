@@ -1,11 +1,11 @@
 default:
-- &Expi1 vM Jagoan 10 08 ✓ ✓
+- &Expi1 vM Jagoan 11 08 ✓
 - &uuid1 d2a52d00-f749-4089-a869-6454fb0a0a78
 - &host1 id2-ray.ipservers.xyz
 - &path1 /JAGOANSSH/
 
-- &Expi2 vL Jagoan 28 juli ✓
-- &uuid2 7c8c2e61-ba3d-450b-b985-3c4bcc29f51e
+- &Expi2 vL Jagoan 11 08 ✓
+- &uuid2 c4add48f-2a3a-4b1b-b2b9-9361d891635b
 - &host2 id2vless.ipservers.xyz
 - &path2 /jagoanssh
 
